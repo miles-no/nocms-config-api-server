@@ -41,15 +41,10 @@ const on = (eventName, handler) => {
   return api;
 };
 
-const trigger = (eventName, ...args) => {
-  events.trigger.apply([eventName].concat(args));
-  return api;
-}
-
 const start = () => {
   server(setup);
   return api;
-}
+};
 
 api = {
   setData,
