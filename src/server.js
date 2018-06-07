@@ -9,7 +9,7 @@ module.exports = (setup) => {
 
   app.get('/', requestHandler(setup));
 
-  app.use((err, req, res, next) => {
+  app.use((err, req, res) => {
     events.trigger('error', err.message);
     res.status(err.status).json({ status: err.status || 500, message: err.response });
   });

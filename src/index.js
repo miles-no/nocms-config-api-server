@@ -1,5 +1,4 @@
 const events = require('nocms-events');
-const requestHandler = require('./request_handler');
 const server = require('./server');
 
 let api = null;

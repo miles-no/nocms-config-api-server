@@ -1,3 +1,4 @@
+/* eslint no-throw-literal: off  */
 const events = require('nocms-events');
 
 module.exports = (setup) => {
