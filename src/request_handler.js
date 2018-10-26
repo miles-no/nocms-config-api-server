@@ -4,6 +4,7 @@ const events = require('nocms-events');
 module.exports = (setup) => {
   return (req, res) => {
     const client = req.query.client;
+    events.trigger('info', `Serving request for ${client} ( ${setup.environment}).`);
     if (!client) {
       throw { status: 400, message: '400 Bad request. client missing in query string', response: '400 Bad request' };
     }
